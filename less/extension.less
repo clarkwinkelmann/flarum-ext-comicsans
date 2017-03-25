@@ -1,0 +1,18 @@
+.comicsans {
+    font-family: 'Comic Sans MS', sans-serif;
+
+    // from https://rainbowcoding.com/2011/12/02/how-to-create-rainbow-text-in-html-css-javascript/
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
+    background-image: gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
+    background-size: 200px auto;
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    animation: ComicSansRainbow 2s linear infinite;
+}
+
+@keyframes ComicSansRainbow {
+    0% { background-position: 0 0; }
+    100% { background-position: 200px 0; }
+}
