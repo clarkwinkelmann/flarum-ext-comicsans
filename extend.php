@@ -2,9 +2,17 @@
 
 namespace ClarkWinkelmann\ComicSans;
 
-use Illuminate\Contracts\Events\Dispatcher;
+use Flarum\Extend;
+use s9e\TextFormatter\Configurator;
 
-return function (Dispatcher $events) {
-    $events->subscribe(Listeners\AddBBCode::class);
-    $events->subscribe(Listeners\AddClientAssets::class);
-};
+return [
+    (new Extend\Frontend('forum'))
+        ->css(__DIR__ . '/resources/less/forum/extension.less'),
+    (new Extend\Formatter)
+        ->configure(function (Configurator $config) {
+            $config->BBcodes->addCustom(
+                '[COMIC]{TEXT}[/COMIC]',
+                '<span class="comicsans">{TEXT}</span>'
+            );
+        })
+];
