@@ -12,20 +12,22 @@
         {
             "name": "Clark Winkelmann",
             "email": "clark.winkelmann@gmail.com",
-            "homepage": "https://clarkwinkelmann.com"
+            "homepage": "https://clarkwinkelmann.com/"
         }
     ],
     "support": {
         "issues": "https://github.com/clarkwinkelmann/flarum-ext-comicsans/issues",
-        "source": "https://github.com/clarkwinkelmann/flarum-ext-comicsans"
+        "source": "https://github.com/clarkwinkelmann/flarum-ext-comicsans",
+        "forum": "https://discuss.flarum.org/d/5293"
     },
     "require": {
         "flarum/core": "^0.1.0-beta.14",
-        "flarum/bbcode": "^0.1.0-beta.14"
+        "flarum/bbcode": "^0.1.0-beta.12"
     },
     "extra": {
         "flarum-extension": {
             "title": "Comic Sans",
+            "category": "formatting",
             "icon": {
                 "name": "fas fa-font",
                 "backgroundColor": "#000",
@@ -33,12 +35,7 @@
             }
         },
         "flagrow": {
-            "discuss": "https://discuss.flarum.org/d/5293-rainbow-comic-sans"
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "ClarkWinkelmann\\ComicSans\\": "src/"
+            "discuss": "https://discuss.flarum.org/d/5293"
         }
     }
 }
