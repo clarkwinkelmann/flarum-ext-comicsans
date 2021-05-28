@@ -7,7 +7,7 @@ use s9e\TextFormatter\Configurator;
 
 return [
     (new Extend\Frontend('forum'))
-        ->css(__DIR__ . '/resources/less/forum/extension.less'),
+        ->css(__DIR__ . '/resources/less/forum.less'),
     (new Extend\Formatter)
         ->configure(function (Configurator $config) {
             $config->BBcodes->addCustom(
